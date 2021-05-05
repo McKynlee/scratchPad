@@ -28,6 +28,7 @@ for (let i = 1; i < 101; i++) {
 
 
 
+////////////////////////// Fibonacci
 
 // Sum even numbers in Fibonacci sequence up to a Limit
 let fibonacciArray = [1, 1];
@@ -49,9 +50,9 @@ for (let i = 0; i < fibonacciArray.length; i++) {
 console.log(sumOfFibonacciEvens);
 
 
+////////////////////// ALTERNATE FIBONACCI SOLUTIONS:
 
-
-// .reduce() example, if you wanted to limit to be the 
+// .reduce() example, if you wanted the limit to be the 
 // total sum of all values in the fibonacci sequence < 4000000
 
 let fibonacciTotalSum = fibonacciArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
@@ -60,7 +61,9 @@ while (fibonacciTotalSum < Limit) {
   fibonacciArray.push(fibonacciArray[fibonacciArray.length - 2] + fibonacciArray[fibonacciArray.length - 1])
 }
 
-// Adding up event values with .reduce()
+
+
+// Alternative example to add even values with .reduce()
 let fibonacciEvens = [];
 
 for (let i = 0; i < fibonacciArray.length; i++) {
