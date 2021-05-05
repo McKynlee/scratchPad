@@ -50,10 +50,25 @@ console.log(sumOfFibonacciEvens);
 
 
 
-// OR monitor limit by using .reduce()
+
+// .reduce() example, if you wanted to limit to be the 
+// total sum of all values in the fibonacci sequence < 4000000
 
 let fibonacciTotalSum = fibonacciArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 
 while (fibonacciTotalSum < Limit) {
   fibonacciArray.push(fibonacciArray[fibonacciArray.length - 2] + fibonacciArray[fibonacciArray.length - 1])
 }
+
+// Adding up event values with .reduce()
+let fibonacciEvens = [];
+
+for (let i = 0; i < fibonacciArray.length; i++) {
+  if (fibonacciArray[i] % 2 == 0) {
+    fibonacciEvens.push(fibonacciArray[i]);
+  }
+}
+
+const fibonacciSumOfEvens = fibonacciEvens.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+console.log(fibonacciSumOfEvens);
